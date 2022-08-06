@@ -1,9 +1,9 @@
 #include <math.h>
 #include <stdio.h>
 #include "src/fixe.h"
-
+#include "tests/tests.h"
 
 int main()
 {
-    return 1;
+    test_conversion();
 }
