@@ -10,8 +10,8 @@ void test_addition()
 
     printf("Float Point: %0.10f, %0.10f\n", a, b);
 
-    fixe32_t c = fixe32_fromfloat(a,19);
-    fixe32_t d = fixe32_fromfloat(a,21);
+    fixe32_t c = fixe32_fromfloat(a,13);
+    fixe32_t d = fixe32_fromfloat(a,24);
 
     printf("Fixed Point: %d, %d \n", c.val, d.val);
 

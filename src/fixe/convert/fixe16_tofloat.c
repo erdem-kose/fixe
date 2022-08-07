@@ -4,11 +4,11 @@
 
 #include "../../fixe.h"
 
-float fixe32_tofloat(fixe32_t a)
+float fixe16_tofloat(fixe16_t a)
 {
     uint8_t Q;
 
-    Q=(a.Q>27)?27:a.Q;
+    Q=(a.Q>12)?12:a.Q;
 
     return ((float)a.val / (float)(1 << Q));
 }

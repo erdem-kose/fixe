@@ -8,8 +8,8 @@ fixe32_t fixe32_add(fixe32_t a, fixe32_t b)
 {
     fixe32_t c;
 
+    int16_t Qdiff=(int16_t)a.Q-(int16_t)b.Q;
 
-    int16_t Qdiff=a.Q-b.Q;
     if(Qdiff>0)
     {
         a.Q-=Qdiff;
@@ -23,9 +23,9 @@ fixe32_t fixe32_add(fixe32_t a, fixe32_t b)
 
     c.Q=a.Q;
 
-    uint64_t add=a.val+b.val;
+    int64_t add=a.val+b.val;
     
-    c.val=(add>UINT32_MAX)?UINT32_MAX:add;
+    c.val=(add>FIXE32_MAX)?FIXE32_MAX:((add<FIXE32_MIN)?FIXE32_MIN:add);
 
     return c;
 }

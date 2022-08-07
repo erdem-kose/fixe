@@ -4,11 +4,11 @@
 
 #include "../../fixe.h"
 
-fixe32_t fixe32_fromfloat(float a, uint8_t Q)
+fixe16_t fixe16_fromfloat(float a, uint8_t Q)
 {
-    fixe32_t b;
+    fixe16_t b;
 
-    b.Q=(Q>27)?27:Q;
+    b.Q=(Q>12)?12:Q;
     b.val=(int32_t)round(a * (float)(1<<b.Q));
 
     return b;
