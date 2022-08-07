@@ -10,5 +10,5 @@ float fixe16_tofloat(fixe16_t a)
 
     Q=(a.Q>12)?12:a.Q;
 
-    return ((float)a.val / (float)(1 << Q));
+    return ((float)a.val / (float)((int16_t)1 << Q));
 }

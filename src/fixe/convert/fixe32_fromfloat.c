@@ -9,7 +9,7 @@ fixe32_t fixe32_fromfloat(float a, uint8_t Q)
     fixe32_t b;
 
     b.Q=(Q>27)?27:Q;
-    b.val=(int32_t)round(a * (float)(1<<b.Q));
+    b.val=(int32_t)round(a * (float)((int32_t)1<<b.Q));
 
     return b;
 }

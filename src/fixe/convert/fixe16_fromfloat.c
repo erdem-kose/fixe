@@ -9,7 +9,7 @@ fixe16_t fixe16_fromfloat(float a, uint8_t Q)
     fixe16_t b;
 
     b.Q=(Q>12)?12:Q;
-    b.val=(int32_t)round(a * (float)(1<<b.Q));
+    b.val=(int16_t)round(a * (float)((int16_t)1<<b.Q));
 
     return b;
 }

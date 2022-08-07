@@ -10,5 +10,5 @@ float fixe64_tofloat(fixe64_t a)
 
     Q=(a.Q>58)?58:a.Q;
 
-    return ((float)a.val / (float)(1 << Q));
+    return ((double)a.val / (double)((int64_t)1 << Q));
 }

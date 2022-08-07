@@ -10,5 +10,5 @@ float fixe32_tofloat(fixe32_t a)
 
     Q=(a.Q>27)?27:a.Q;
 
-    return ((float)a.val / (float)(1 << Q));
+    return ((float)a.val / (float)((int32_t)1 << Q));
 }
